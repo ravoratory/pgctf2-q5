@@ -10,7 +10,6 @@ from .forms import UserForm
 class LoginView(FormView):
     form_class = UserForm
     template_name = "index.html"
-    success_url = reverse_lazy("accounts:success")
     def post(self, request, *args, **kwargs):
         form = self.get_form()
         username = form.data["username"]
